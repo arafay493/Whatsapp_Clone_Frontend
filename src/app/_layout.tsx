@@ -1,8 +1,15 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Stack } from 'expo-router'
-
+import * as SplashScreen from "expo-splash-screen";
+SplashScreen.preventAutoHideAsync();
 const RootNavigation = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      SplashScreen.hideAsync();
+      // perform any necessary tasks here.
+    }, 2000);
+  }, [])
   return (
     <Stack>
       <Stack.Screen name = "index"/>
