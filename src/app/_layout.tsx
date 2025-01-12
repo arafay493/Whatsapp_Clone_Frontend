@@ -5,7 +5,7 @@ import { Stack } from 'expo-router'
 const RootNavigation = () => {
   return (
     <Stack>
-      <Text>RootNavigation</Text>
+      <Stack.Screen name = "index"/>
     </Stack>
   )
 }
